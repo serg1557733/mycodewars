@@ -92,7 +92,7 @@ if n is 0, return an empty array
 if n is anything other than an integer or integer-formatted string (e.g. '123') that is >=0, throw a TypeError
 When throwing a TypeError, the message should be n is invalid, where you replace n for the actual value passed to the function. */
 
-function prefill(n, v) {
+/* function prefill(n, v) {
     console.log(!Number.isInteger(n));
 
   if ( isNaN(n)|| typeof n === 'boolean' || !isFinite(n) || !Number.isInteger(n) ) {
@@ -106,4 +106,53 @@ function prefill(n, v) {
     }
 }
 
-console.log(prefill(1.2 , 1));
+console.log(prefill(1.2 , 1)); */
+
+/* This kata is designed to test your ability to extend the functionality of built-in classes. In this case, we want you to extend the built-in Array class with the following methods: square(), cube(), average(), sum(), even() and odd().
+
+Explanation:
+
+square() must return a copy of the array, containing all values squared
+cube() must return a copy of the array, containing all values cubed
+average() must return the average of all array values; on an empty array must return NaN (note: the empty array is not tested in Ruby!)
+sum() must return the sum of all array values
+even() must return an array of all even numbers
+odd() must return an array of all odd numbers */
+
+
+/* Array.prototype.square = function(arr) {
+  return this.map(item => item**2);
+}
+Array.prototype.cube = function() {
+  return this.map(item => item**3);
+}
+
+Array.prototype.average = function() {
+ if(this.length){
+   return this.reduce((a, b) => (a + b)) / this.length;
+ } else return NaN;  
+   
+}
+Array.prototype.sum = function(){
+ if (this.length){
+   return this.reduce((a, b) => (a + b));
+ } else {
+   return NaN;
+ }
+}  
+Array.prototype.even = function() {
+   return this.filter(item => item % 2 === 0);
+}
+Array.prototype.odd = function() {
+   return this.filter(item => !(item % 2 === 0));
+}
+let numbers = [];
+
+console.log(numbers.sum());  */
+
+
+function createMessage(h) {
+  return a => b => c => d => f => `${h} ${a} ${b} ${c} ${d}`;
+}
+
+console.log(createMessage("Hello")("how")("are")("you?"));
