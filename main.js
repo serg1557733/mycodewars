@@ -151,8 +151,52 @@ let numbers = [];
 console.log(numbers.sum());  */
 
 
-function createMessage(h) {
-  return a => b => c => d => f => `${h} ${a} ${b} ${c} ${d}`;
+/* function createMessage(h) {
+  return a => b => c => d => f => `${d} ${a} ${b} ${c} ${d + f}`;
 }
 
-console.log(createMessage("Hello")("how")("are")("you?"));
+console.log(createMessage("Hello"));
+ */
+
+//function generator
+
+
+/* function* generator() {
+  yield 's';
+  yield 'c';
+  yield 't';
+  yield 'sdfe';
+} */
+/* 
+const str = generator();
+
+console.log(str.next().value);
+console.log(str.next());
+console.log(str.next());
+
+console.log(str.next());
+console.log(str.next());
+console.log(str.next());
+
+ */
+
+function* count(n) {
+  for (let i = 0; i < n; i++) {
+     yield i;
+     
+  }
+}
+
+for (let key of count(7)) {
+    console.log(key);
+}
+
+/* const counter = count(7);
+
+console.log(counter.next());
+console.log(counter.next());
+
+console.log(counter.next()); */
+
+
+
